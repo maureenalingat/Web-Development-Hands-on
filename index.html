@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foodie Slides</title>
+</head>
+<link rel="stylesheet" href="design.css">
+<link rel="icon"  href="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Favicon.ico">
+
+<body>
+    <ul>
+        <li><a href="index.html">Products</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li style="float:right"><a class="active" href="about.html">About</a></li>
+      </ul>
+    <div class="top-container">
+      <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\cart-removebg-preview.png" width="100" height="100">
+<img src= "C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Store Logo.png" alt="Foodie Slides Logo">
+<h1> Foodie Slides </h1> 
+    </div>
+<h2> Does it right a bell?</h2>
+<h3> Well, Foodie Slides is an e-commerce website created to sell a genuine marble type kicthenwares.Sounds sophisticated right?</h3>
+<h2> Shop with us!</h2>
+
+<style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 1.jpg" style="width:100%">
+      <div class="text">Baking Starter Package</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 2.jpg" style="width:100%">
+      <div class="text">Glamorous Dining Set Up</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 3.jpg" style="width:100%">
+      <div class="text">Mini Buffet Type</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<center><h2>Choose your desired products here:</h2></center>
+<style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+    
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+    
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    .card button:hover {
+      opacity: 0.7;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2 style="text-align:center">Product Card</h2>
+    
+    <div class="card">
+      <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 4.jpg" alt="Kettle, Bread Toaster, and Mugs" style="width:100%">
+      <h1>Kettle, Bread Toaster, and Mugs</h1>
+      <p class="price">₱ 1,499.00 only!</p>
+      <p>A set of kettle, bread toaster, and mugs is perfect for your everyday breakfast.</p>
+      <p><button><a href="marble4.html">Add to Cart </a></button></p>
+    </div>
+
+    <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 5.jpg" alt="Sauce Basin with Golden Scoop included" style="width:100%">
+        <h1>Sauce Basin with Golden Scoop included</h1>
+        <p class="price">₱ 699.00 only!</p>
+        <p>A set of sauce basin with golden scoop is helpful enough to pour tasty partners on your delights.</p>
+        <p><button><a href="marble5.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 6.jfif" alt="Vertical Holder" style="width:100%">
+        <h1>Vertical Holder</h1>
+        <p class="price">₱ 199.00 only!</p>
+        <p>A vase-like holder of kitchen utensils perfect for keeping your kitchen clean-looking.</p>
+        <p><button><a href="marble6.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 7.jfif" alt="Marble-type Utensils" style="width:100%">
+        <h1>Marble-type Utensils</h1>
+        <p class="price">₱ 249.00 only!</p>
+        <p>A set of kitchen utensils that will help you make your kitchen look neat. Cute.</p>
+        <p><button><a href="marble7.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 8.jpg" alt="Solo Soup Bowl" style="width:100%">
+        <h1>Solo Soup Bowl</h1>
+        <p class="price">₱ 119.00 only!</p>
+        <p>A piece of soup bowl perfect for lone-eaters.</p>
+        <p><button><a href="marble8.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 9.jfif" alt="Marble Chop Boards" style="width:100%">
+        <h1>Marble Chop Board</h1>
+        <p class="price">₱ 499.00 only!</p>
+        <p>A marble type chop board suitable for chunking your delicious foods.</p>
+        <p><button><a href="marble9.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 10.jfif" alt="Scale Scrapper" style="width:100%">
+        <h1>Scale Scrapper</h1>
+        <p class="price">₱ 149.00 only!</p>
+        <p>A marble tool used to scrape off the scales.</p>
+        <p><button><a href="marble10.html">Add to Cart </a></button></p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 11.jfif" alt="Mortar and Pestle" style="width:100%">
+        <h1>Mortar and Pestle</h1>
+        <p class="price">₱ 499.00 only!</p>
+        <p>A complimentary kitchenware used to ground ingredients into fine pieces.</p>
+        <p><button><a href="marble11.html">Add to Cart </a></button></p>
+      </div>
+      
+      <div class="card">
+        <img src="C:\Users\maureen.a.lingat\Desktop\Hands-on\Images\Marble 12.jfif" alt="Wine Holder" style="width:100%">
+        <h1>Wine Holder</h1>
+        <p class="price">₱ 349.00 only!</p>
+        <p>A vertical holder for your wine-to-chill drinks.</p>
+        <p><button><a href="marble12.html">Add to Cart </a></button></p>
+      </div>
+
+      <hr>
+
+    </head>
+    <body>
+
+</body>
+</html>
